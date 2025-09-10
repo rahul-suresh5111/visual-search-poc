@@ -58,7 +58,7 @@ class AzureStorageHandler:
             timestamp = datetime.utcnow().strftime('%Y%m%d_%H%M%S')
             unique_id = str(uuid.uuid4())[:8]
             file_extension = os.path.splitext(file_name)[1]
-            blob_name = f"{timestamp}_{unique_id}{file_extension}"
+            blob_name = f"input/{timestamp}_{unique_id}{file_extension}"
             
             st.info(f"Uploading as: {blob_name}")
             
